@@ -3,6 +3,7 @@ package main
 import (
 	"fmt"
 	"math/cmplx"
+	"runtime"
 )
 
 //initial function > main
@@ -41,6 +42,9 @@ func main() {
 	fmt.Println(greetings_msg("love yourself"))
 	//call simple_calculator function
 	fmt.Println("Result:", simple_calculator("+", 12, 1231))
+	fmt.Println("Total:", print_numbers(1, 5))
+	conditions()
+	defer_statement()
 }
 
 func greetings_msg(msg string) string {
@@ -58,4 +62,45 @@ func simple_calculator(operand string, number1, number2 float32) float32 {
 	} else {
 		return number1 / number2
 	}
+}
+
+func print_numbers(start, stop int) int {
+	var total_full int
+	//For loop has three components ; init, condition, post statement
+	for item := start; item < stop; item++ {
+		total_full += item
+	}
+	var total_optional int
+	//The init and post statements are optional.
+	for total_optional < 100 {
+		total_optional++
+	}
+	//this loop works forever
+	/*
+		for {
+			fmt.Println("Forever ")
+
+		}
+	*/
+	return 0
+}
+
+func conditions() {
+	fmt.Println("Go runs on ")
+	switch os := runtime.GOOS; os {
+	case "darwin":
+		fmt.Println("OS X.")
+	case "linux":
+		fmt.Println("Linux")
+	default:
+		//freebds, openbsd
+		fmt.Println("%s \n", os)
+	}
+}
+
+//A defer statement defers the execution of a function until the surrounding function returns.
+func defer_statement() {
+	defer fmt.Println("I am ready !")
+	defer fmt.Println("Yes for sure")
+	fmt.Println("Are you ready")
 }
