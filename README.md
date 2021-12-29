@@ -13,7 +13,9 @@ git clone https://github.com/hasanozdem1r/Lets_GoLang.git
 - Sending Email with GoLang
 - Currency Tracking with GoLang and Exchange Rates Api
 
-
+## Learning Materials
+- [A tour of GO](https://go.dev/tour/welcome/1)
+- [Golang Community @dev.to](https://dev.to/t/go)
 ## Contributing
 Pull requests are welcome. For major changes, please open an issue first to discuss what you would like to change.
 
