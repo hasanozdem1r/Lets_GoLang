@@ -6,7 +6,7 @@ import (
 	"runtime"
 )
 
-//initial function > main
+// initial function > main
 func main() {
 	var (
 		//variable declaration
@@ -98,7 +98,7 @@ func conditions() {
 	}
 }
 
-//A defer statement defers the execution of a function until the surrounding function returns.
+// A defer statement defers the execution of a function until the surrounding function returns.
 func defer_statement() {
 	defer fmt.Println("I am ready !")
 	defer fmt.Println("Yes for sure")
